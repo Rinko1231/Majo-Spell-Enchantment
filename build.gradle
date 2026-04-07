@@ -170,7 +170,7 @@ dependencies {
     implementation fg.deobf("curse.maven:caelus-308989:5281700")
     //implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:6488484")
     //implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:6970299")
-    implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:7402504")
+    implementation fg.deobf("curse.maven:irons-spells-n-spellbooks-855414:7691158")
 
     runtimeOnly fg.deobf("curse.maven:puzzles-lib-495476:6918565")
     runtimeOnly fg.deobf("curse.maven:enchanting-infuser-551151:5528724")

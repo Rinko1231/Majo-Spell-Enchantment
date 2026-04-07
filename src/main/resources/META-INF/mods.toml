@@ -4,10 +4,11 @@ license="GPLv3"
 
 [[mods]]
 modId="majospellenchantment"
-version="1.20.1-1.1.3"
+version="1.20.1-1.2.0"
 #logoFile="logo.png" #optional
 displayName="Majo's Spell Enchantment"
 authors="Rinko1231"
 description='''
 Add some enchantments for ISS.
+Thanks to DeliciousBread481's pr.
 '''

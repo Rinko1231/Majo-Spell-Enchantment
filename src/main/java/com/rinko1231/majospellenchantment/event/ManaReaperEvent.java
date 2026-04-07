@@ -5,16 +5,10 @@ import com.rinko1231.majospellenchantment.config.MajoSpellEnchantmentConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 
 import io.redspace.ironsspellbooks.network.SyncManaPacket;
-import io.redspace.ironsspellbooks.setup.Messages;
-import net.minecraft.core.Holder;
-import net.minecraft.resources.ResourceKey;
+import io.redspace.ironsspellbooks.setup.PacketDistributor;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -54,6 +48,6 @@ public class ManaReaperEvent {
         MagicData magicData = MagicData.getPlayerMagicData(serverPlayer);
         magicData.addMana((float)manaRestore);
 
-        Messages.sendToPlayer(new SyncManaPacket(magicData), serverPlayer);
+        PacketDistributor.sendToPlayer(serverPlayer, new SyncManaPacket(magicData));
     }
 }

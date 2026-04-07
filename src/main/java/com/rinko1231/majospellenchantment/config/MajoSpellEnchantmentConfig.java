@@ -78,6 +78,7 @@ public class MajoSpellEnchantmentConfig {
     public static ForgeConfigSpec.BooleanValue manaMendingTreasureOnly;
     public static ForgeConfigSpec.BooleanValue manaMendingIncompatibleWithMending;
     public static ForgeConfigSpec.DoubleValue manaMendingThreshold;
+    public static ForgeConfigSpec.DoubleValue manaMendingCoefficient;
 
     public static ForgeConfigSpec.BooleanValue NecrovoltDisabled;
     public static ForgeConfigSpec.BooleanValue NecrovoltTreasureOnly;
@@ -314,6 +315,10 @@ public class MajoSpellEnchantmentConfig {
         manaMendingThreshold = BUILDER
                 .comment("[Mana Mending] Base Mana Cost to Trigger Mana Mending")
                 .defineInRange("manaMendingThreshold", 30.0, -Integer.MAX_VALUE, Integer.MAX_VALUE);
+        manaMendingCoefficient = BUILDER
+                .comment("[Mana Mending] Durability Recovered per 100 Mana")
+                .defineInRange("manaMendingCoefficient", 2.0, 0.01, Integer.MAX_VALUE);
+
 
         BUILDER.pop();
 

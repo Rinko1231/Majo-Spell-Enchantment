@@ -5,10 +5,8 @@ import com.rinko1231.majospellenchantment.config.MajoSpellEnchantmentConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 
 import io.redspace.ironsspellbooks.network.SyncManaPacket;
-import io.redspace.ironsspellbooks.setup.Messages;
-import net.minecraft.core.registries.Registries;
+import io.redspace.ironsspellbooks.setup.PacketDistributor;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -45,6 +43,6 @@ public class BloodManaEvent {
         MagicData magicData = MagicData.getPlayerMagicData(player);
         magicData.addMana((float) manaRestore);
 
-        Messages.sendToPlayer(new SyncManaPacket(magicData), player);
+        PacketDistributor.sendToPlayer(player, new SyncManaPacket(magicData));
     }
 }
