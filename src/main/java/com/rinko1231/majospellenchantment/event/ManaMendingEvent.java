@@ -29,8 +29,8 @@ public class ManaMendingEvent {
         float consumed = oldMana - newMana;
         if (consumed < MajoSpellEnchantmentConfig.manaMendingThreshold.get()) return;
 
-        // 规则：至少 1 点；每消耗满 100 再 +1
-        int repairPoints = 1 + (int) Math.floor(consumed / 100f);
+        // 规则：至少 1 点；每消耗满 100 再 +2
+        int repairPoints = 1 + (int) (Math.floor(consumed / 100f) * MajoSpellEnchantmentConfig.manaMendingCoefficient.get());
 
         // 收集需要修复的物品（护甲 + 主副手）
         List<ItemStack> targets = new ArrayList<>();

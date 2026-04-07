@@ -67,6 +67,7 @@ public class MajoSpellEnchantmentConfig {
 
     public static ModConfigSpec.BooleanValue manaMendingEnabled;
     public static ModConfigSpec.DoubleValue manaMendingThreshold;
+    public static ModConfigSpec.DoubleValue manaMendingCoefficient;
 
     public static ModConfigSpec.BooleanValue gentleGraveyardKeeperEnabled;
 
@@ -264,6 +265,10 @@ public class MajoSpellEnchantmentConfig {
         manaMendingThreshold = BUILDER
                 .comment("[Mana Mending] Base Mana Cost to Trigger Mana Mending")
                 .defineInRange("manaMendingThreshold", 30.0, -Integer.MAX_VALUE, Integer.MAX_VALUE);
+        manaMendingCoefficient = BUILDER
+                .comment("[Mana Mending] Durability Recovered per 100 Mana")
+                .defineInRange("manaMendingCoefficient", 2.0, 0.01, Integer.MAX_VALUE);
+
         //Graveyard Keeper
         gentleGraveyardKeeperEnabled = BUILDER
                 .comment("[Pax Sepulchri/Gentle Graveyard Keeper] If Disabled, it will not take effect.")

@@ -5,6 +5,9 @@
     "majospellenchantment:ocean_grace_enchant",
     "majospellenchantment:gentle_graveyard_keeper_enchant",
     "majospellenchantment:excitatio_arcana_enchant",
-    "majospellenchantment:ice_fire_song_enchant"
+    "majospellenchantment:ice_fire_song_enchant",
+    "majospellenchantment:phase_dashed_enchant",
+    "majospellenchantment:nocturne_aria_enchant",
+    "majospellenchantment:daylight_anthem_enchant"
   ]
 }
