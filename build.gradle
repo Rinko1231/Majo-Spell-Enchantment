@@ -137,8 +137,8 @@ dependencies {
     runtimeOnly "curse.maven:geckolib-388172:6659026"
     runtimeOnly "curse.maven:playeranimator-658587:6024462"
     implementation "curse.maven:better-combat-by-daedelus-639842:6532547"
-    implementation "curse.maven:irons-spells-n-spellbooks-855414:6834357"
-
+    implementation "curse.maven:irons-spells-n-spellbooks-855414:7822864"
+    implementation "curse.maven:irons-lib-1492763:7830106"
     runtimeOnly "curse.maven:jupiter-1072905:6770505"
     runtimeOnly "curse.maven:uranus-1010827:6552770"
     //runtimeOnly "curse.maven:iceandfire-ce-1040076:6758480"
