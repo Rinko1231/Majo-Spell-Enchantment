@@ -4,7 +4,7 @@ import com.rinko1231.majospellenchantment.config.MajoSpellEnchantmentConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.spells.blood_needle.BloodNeedle;
-import io.redspace.ironsspellbooks.network.ClientboundSyncMana;
+import io.redspace.ironsspellbooks.network.SyncManaPacket;
 import io.redspace.ironsspellbooks.setup.Messages;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -44,7 +44,7 @@ public class VladTepesEvent {
         {
             magicData.addMana(-(manaCost));
             shootExtraNeedles(player, event.getLevel(), enchantLevel, bloodPower);
-            Messages.sendToPlayer(new ClientboundSyncMana(magicData), player);
+            Messages.sendToPlayer(new SyncManaPacket(magicData), player);
         }
     }
 
@@ -86,7 +86,4 @@ public class VladTepesEvent {
             world.addFreshEntity(needle);
         }
     }
-
-
-
 }

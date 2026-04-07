@@ -4,7 +4,7 @@ import com.rinko1231.majospellenchantment.config.MajoSpellEnchantmentConfig;
 
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 
-import io.redspace.ironsspellbooks.network.ClientboundSyncMana;
+import io.redspace.ironsspellbooks.network.SyncManaPacket;
 import io.redspace.ironsspellbooks.setup.Messages;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerPlayer;
@@ -45,6 +45,6 @@ public class BloodManaEvent {
         MagicData magicData = MagicData.getPlayerMagicData(player);
         magicData.addMana((float) manaRestore);
 
-        Messages.sendToPlayer(new ClientboundSyncMana(magicData), player);
+        Messages.sendToPlayer(new SyncManaPacket(magicData), player);
     }
 }

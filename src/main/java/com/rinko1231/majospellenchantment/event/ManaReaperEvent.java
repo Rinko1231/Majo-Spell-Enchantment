@@ -4,7 +4,7 @@ import com.rinko1231.majospellenchantment.config.MajoSpellEnchantmentConfig;
 
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 
-import io.redspace.ironsspellbooks.network.ClientboundSyncMana;
+import io.redspace.ironsspellbooks.network.SyncManaPacket;
 import io.redspace.ironsspellbooks.setup.Messages;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
@@ -54,6 +54,6 @@ public class ManaReaperEvent {
         MagicData magicData = MagicData.getPlayerMagicData(serverPlayer);
         magicData.addMana((float)manaRestore);
 
-        Messages.sendToPlayer(new ClientboundSyncMana(magicData), serverPlayer);
+        Messages.sendToPlayer(new SyncManaPacket(magicData), serverPlayer);
     }
-    }
+}

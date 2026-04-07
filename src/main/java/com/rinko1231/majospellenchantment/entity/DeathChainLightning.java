@@ -160,6 +160,6 @@ public class DeathChainLightning extends AbstractMagicProjectile {
     }
 
     @Override public float getSpeed() { return 0.0F; }
-    public Optional<SoundEvent> getImpactSound() { return Optional.empty(); }
+    public Optional<Supplier<SoundEvent>> getImpactSound() { return Optional.empty(); }
     @Override public boolean shouldBeSaved() { return false; }
 }
