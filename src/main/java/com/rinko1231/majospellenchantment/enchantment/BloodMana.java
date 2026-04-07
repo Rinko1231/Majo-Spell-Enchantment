@@ -1,6 +1,5 @@
 package com.rinko1231.majospellenchantment.enchantment;
 
-import com.rinko1231.majospellenchantment.MajoSpellEnchantment;
 import com.rinko1231.majospellenchantment.config.MajoSpellEnchantmentConfig;
 import com.rinko1231.majospellenchantment.init.BaseEnchantment;
 import net.minecraft.world.entity.EquipmentSlot;

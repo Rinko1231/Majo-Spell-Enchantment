@@ -3,11 +3,7 @@ package com.rinko1231.majospellenchantment.event;
 import com.rinko1231.majospellenchantment.config.MajoSpellEnchantmentConfig;
 
 import com.rinko1231.majospellenchantment.init.ModMobEffects;
-import io.redspace.ironsspellbooks.api.events.SpellDamageEvent;
-import io.redspace.ironsspellbooks.api.events.SpellOnCastEvent;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
